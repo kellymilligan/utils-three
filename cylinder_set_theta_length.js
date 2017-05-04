@@ -2,7 +2,7 @@
     Change the thetaLength on a THREE.CylinderGeometry
     ---
     Note: Currently assumes an openEnded cylinder only. The 'cap' vertices
-          also need adjustment if a non-openEnded cylinder is required.
+          will also need adjustment if a non-openEnded cylinder is required.
 
     geometry        THREE.Geometry      Geometry to adjust
     thetaLength     Number              New thetaLength in radians
@@ -12,6 +12,7 @@
 export default function(geometry, thetaLength = Math.PI * 2) {
 
     if ( geometry.parameters.openEnded === false ) { console.warn('CylinderGeometry.parameters.openEnded is false, this util can only update vertices on openEnded cylinder geometry.'); }
+    if ( geometry.parameters.thetaLength === undefined ) { console.warn('CylinderGeometry.parameters.thetaLength was not defined and so defaulted to a full cylinder (2PI). In order to adjust thetaLength it should be instantiated with a length of less than 2PI.'); }
 
     // Use defaults for missing values.
     // Defaults as specified: https://github.com/mrdoob/three.js/blob/master/src/geometries/CylinderGeometry.js

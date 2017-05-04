@@ -34,4 +34,5 @@ export default function(geometry, thetaLength = Math.PI) {
     }
 
     geometry.verticesNeedUpdate = true;
+    geometry.computeVertexNormals();
 }

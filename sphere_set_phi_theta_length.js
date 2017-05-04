@@ -41,4 +41,5 @@ export default function(
     }
 
     geometry.verticesNeedUpdate = true;
+    geometry.computeVertexNormals();
 }

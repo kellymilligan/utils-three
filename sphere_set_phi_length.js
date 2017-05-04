@@ -34,4 +34,5 @@ export default function(geometry, phiLength = Math.PI * 2) {
     }
 
     geometry.verticesNeedUpdate = true;
+    geometry.computeVertexNormals();
 }

@@ -15,7 +15,7 @@ let shader_material = new THREE.ShaderMaterial( {
         THREE.ShaderLib[ 'phong' ].uniforms,
         {
             // Like setting the 'color' property on MeshPhongMaterial
-            diffuse: { type: 'c', value: {r: 0.4, g: 0.1, b: 1.0} },
+            diffuse: { type: 'c', value: { r: 0.4, g: 0.1, b: 1.0 } },
             opacity: { type: 'f', value: 1.0 },
             // Custom uniforms
             uCustom: { type: 'f', value: 0.0 }

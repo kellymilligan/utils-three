@@ -12,7 +12,6 @@
 */
 
 import { Vector3, LineCurve3, CurvePath } from 'three';
-import {PI, TWO_PI, HALF_PI} from '../math/constants';
 
 export default class CustomCurvePath extends CurvePath {
 

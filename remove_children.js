@@ -8,6 +8,6 @@
 
 export default function removeChildren(parent) {
 
-    parent.children.forEach( ( child ) => parent.remove( child ) );
+    parent.children.forEach( child => parent.remove( parent.children[ 0 ] ) );
     return parent;
 }
